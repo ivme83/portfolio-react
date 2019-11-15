@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the main of the site/application.
+// -----------------------------------------------------------------------------
+
+.app-main {
+    grid-area: mn;
+    background-color: $body-background;
+
+    .page-container {
+        max-width: 768px;
+    }
+}

@@ -4,8 +4,7 @@ import { PageHeader } from '../../components/index';
 const About = () => (
     <div className="page-container">
         <PageHeader
-            header={"About Me"}
-            subheader={"Roland Willis"}
+            header={"Contact"}
         />
     </div>
 );

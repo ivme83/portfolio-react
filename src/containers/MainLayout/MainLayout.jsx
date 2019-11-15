@@ -1,6 +1,5 @@
 import React, { Component, Suspense } from 'react';
 import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
-import * as router from 'react-router-dom';
 
 import SideBar from '../Sidebar/Sidebar.jsx';
 
@@ -11,34 +10,30 @@ class MainLayout extends Component {
 
     render() {
         return (
-            <div class="app">
-                <SideBar />
-                <main className="app-main">
-                    <HashRouter>
+            <div className="app">
+                <HashRouter>
+                    <SideBar />
+                    <main className="app-main">
                         <Suspense fallback={this.loading()}>
                             <Switch>
-                                {
-                                    routes.map((route, idx) => {
-                                        return route.component ? (
-                                            <Route
-                                                key={idx}
-                                                path={route.path}
-                                                exact={route.exact}
-                                                name={route.name}
-                                                render={props => (
-                                                    <route.component
-                                                        {...props}
-                                                    />
-                                                )}
-                                            />
-                                        ) : null;
-                                    })
-                                }
-                                <Redirect from='/' to='/about'/>
+                                {routes.map((route, idx) => {
+                                    return route.component ? (
+                                        <Route
+                                            key={idx}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            name={route.name}
+                                            render={props => (
+                                                <route.component {...props} />
+                                            )}
+                                        />
+                                    ) : null;
+                                })}
+                                <Redirect from="/" to="/about" />
                             </Switch>
                         </Suspense>
-                    </HashRouter>
-                </main>
+                    </main>
+                </HashRouter>
             </div>
         );
     }

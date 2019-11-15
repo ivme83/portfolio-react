@@ -1,0 +1,8 @@
+.app {
+    display: grid;
+    grid-template: 1fr / 200px 1fr;
+    grid-template-areas:    "sd mn";
+    grid-gap: 0px;
+    width: 100vw;
+    height: 100vh;   
+}

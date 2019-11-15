@@ -1,0 +1,8 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar of the site/application.
+// -----------------------------------------------------------------------------
+
+.app-sidebar {
+    grid-area: sd;
+    background-color: $sidebar-background;
+}

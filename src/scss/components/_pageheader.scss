@@ -1,0 +1,26 @@
+header {
+    padding-left: 20px;
+
+    text-align: right;
+    font-weight: normal;
+
+    h1 {
+        margin-top: 0px;
+        margin-bottom: 0px;
+        
+        border-bottom-style: solid;
+        border-bottom-width: 4px;
+
+        font-size: $font-size-2x-large;
+        font-weight: normal;
+    }
+
+    h2 {
+        margin-top: 0px;
+
+        vertical-align: top;
+        font-size: $font-size-large;
+        font-style: italic;
+        font-weight: normal;
+    }
+}
