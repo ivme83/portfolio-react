@@ -6,7 +6,7 @@ import SideBar from '../Sidebar/Sidebar.jsx';
 import routes from '../../routes';
 
 class MainLayout extends Component {
-    loading = () => <div>Loading. . .</div>;
+    loading = () => <div class="loading">Loading&#8230;</div>;
 
     render() {
         return (
