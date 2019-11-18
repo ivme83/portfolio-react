@@ -5,4 +5,62 @@
 .app-sidebar {
     grid-area: sd;
     background-color: $sidebar-background;
+
+    .portfolio_img_holder {
+        margin-left: auto;
+        margin-right: auto;
+
+        width: 150px;
+        height: 150px;
+
+        border-color: darkgray darkcyan;
+        border-image: none;
+        border-radius: 50% 50% 50% 50%;
+        border-style: solid;
+        border-width: 8px;
+        overflow: hidden;
+
+        .portfolio_img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    nav {
+        // display: flex;
+
+        width: 100%;
+        padding: 0px;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+
+            list-style: none;
+
+            padding: 0px;
+
+            font-size: $font-size-medium;
+
+            li {
+                padding: 4px 8px;
+            }
+            a {
+                text-decoration: none;
+            }
+
+            li:hover {
+                background-color: darken($sidebar-background, 10%);
+                border-left: 6px solid darken($sidebar-background, 80%);
+
+                font-size: $font-size-large;
+            }
+        }
+
+        @include respond-to(small) {
+            ul {
+                flex-direction: column;
+            }
+        }
+    }
 }

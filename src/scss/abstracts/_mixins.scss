@@ -23,6 +23,17 @@
   }
 }
 
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
+    } @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+          + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
 /// Make a context based selector a little more friendly
 /// @author Hugo Giraudel
 /// @param {String} $context
