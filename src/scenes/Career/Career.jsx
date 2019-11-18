@@ -1,13 +1,12 @@
 import React from 'react';
 import { PageHeader } from '../../components/index';
 
-const About = () => (
+const Career = () => (
     <div className="page-container animated fadeIn">
         <PageHeader
-            header={"About Me"}
-            subheader={"Roland Willis"}
+            header={"Career"}
         />
     </div>
 );
 
-export default About;
+export default Career;

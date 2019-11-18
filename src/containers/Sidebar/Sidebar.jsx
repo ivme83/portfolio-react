@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import portfolio_img from '../../assets/images/portfolio_img.jpg';
 
@@ -14,18 +14,18 @@ const SideBar = props => (
         </figure>
         <nav>
             <ul>
-                <Link className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/about">
                     <li className="nav-item">About</li>
-                </Link>
-                <Link className="nav-link" to="/career">
+                </NavLink>
+                <NavLink className="nav-link" to="/career">
                     <li className="nav-item">Career</li>
-                </Link>
-                <Link className="nav-link" to="/portfolio">
+                </NavLink>
+                <NavLink className="nav-link" to="/portfolio">
                     <li className="nav-item">Portfolio</li>
-                </Link>
-                <Link className="nav-link" to="/contact">
+                </NavLink>
+                <NavLink className="nav-link" to="/contact">
                     <li className="nav-item">Contact</li>
-                </Link>
+                </NavLink>
             </ul>
         </nav>
     </aside>
