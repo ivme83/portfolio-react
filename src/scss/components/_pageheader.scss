@@ -32,6 +32,12 @@ header {
         animation-fill-mode: both;
 
         animation-delay: 500ms;
+
+        padding-right: 12px;
+
+        @include respond-to(small) {
+            padding-right: 0px;
+        }
     }
 
     hr {

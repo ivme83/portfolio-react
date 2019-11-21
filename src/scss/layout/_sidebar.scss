@@ -31,6 +31,7 @@
 
         width: 100%;
         padding: 0px;
+        padding-right: 8px;
 
         ul {
             display: flex;
@@ -62,6 +63,7 @@
         }
 
         @include respond-to(small) {
+            padding: 0px;
             ul {
                 flex-direction: column;
 
