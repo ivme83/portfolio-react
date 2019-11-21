@@ -1,0 +1,116 @@
+.contact-icon_container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 3rem;
+    padding: 0px 2px;
+
+    @include respond-to(small) {
+        margin-left: 20px;
+        padding: 0px;
+    }
+    
+    .contact_box {
+        position: absolute;
+        width: 10%;
+        height: 100%;
+        border-radius: 16px;
+        border-top: 4px solid $text-color;
+        border-bottom: 4px solid $text-color;
+        border-right: 4px solid $text-color;
+
+        padding: 4px 8px;
+
+        .close_icon {
+            position: absolute;
+            right: 4px;
+        }
+
+        .contact_link {
+            position: absolute;
+            right: 8px;
+            bottom: 4px;
+
+            font-size: $font-size-large;
+        }
+    }
+
+    .contactGrowLeft {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        -webkit-animation-name: contactGrowLeft;
+        animation-name: contactGrowLeft;
+    }
+
+    @-webkit-keyframes contactGrowLeft {
+        0% {
+            width: 10%;
+            opacity: 0;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    @keyframes contactGrowLeft {
+        0% {
+            width: 10%;
+            opacity: 0;
+        }
+        75% {
+            opacity: 1;
+        }
+        100% {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+
+    .contactShrinkRight {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+
+        -webkit-animation-name: contactShrinkRight;
+        animation-name: contactShrinkRight;
+    }
+
+    @-webkit-keyframes contactShrinkRight {
+        0% {
+            width: 100%;
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            width: 10%;
+            opacity: 0;
+        }
+    }
+    @keyframes contactShrinkRight {
+        0% {
+            width: 100%;
+            opacity: 1;
+        }
+        75% {
+            opacity: 0;
+        }
+        100% {
+            width: 10%;
+            opacity: 0;
+        }
+    }
+}
+
+

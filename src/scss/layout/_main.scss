@@ -16,7 +16,7 @@
     animation-duration: 1s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
- }
+}
 
 @-webkit-keyframes fadeIn {
     0% {
@@ -26,7 +26,6 @@
         opacity: 1;
     }
 }
-
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -36,7 +35,7 @@
     }
 }
 
-.fadeIn {
+.fadeIn {    
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }

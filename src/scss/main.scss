@@ -27,11 +27,13 @@
 @import
   'components/button',
   'components/pageheader',
-  'components/overlayloader';
+  'components/overlayloader',
+  'components/icons';
 
 // 6. Page-specific styles
 @import
-  'pages/about';
+  'pages/about',
+  'pages/contact';
 
 // 7. Themes
 @import
