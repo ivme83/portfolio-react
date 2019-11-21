@@ -1,11 +1,9 @@
-.contact-icon {
+.contact_box_icon {
     background-color: $text-color;
     color: $body-background;
     border: 4px solid $text-color;
 
     font-size: 6rem;
-
-    cursor: pointer;
     
     @include respond-to(small) {
         font-size: 10rem;
