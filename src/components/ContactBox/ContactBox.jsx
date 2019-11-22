@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const ContactBox = props => {
-    const [active, setActive] = useState(-1);
     return (
         <section className="contact_box_container">
             <FontAwesomeIcon
@@ -10,19 +9,9 @@ const ContactBox = props => {
                 icon={['fab', props.icon]}
                 border
                 fixedWidth
-                onClick={() => setActive(1)}
+                onClick={props.setActive}
             />
-            <div
-                className={`contact_box
-                ${
-                    active === 1
-                        ? 'contactGrowLeft'
-                        : active === -1
-                        ? 'hidden'
-                        : 'contactShrinkRight'
-                }
-            `}
-            >
+            <div className={`contact_box ${props.className}`}>
                 <a
                     className="contact_link"
                     target={props.target}
@@ -34,7 +23,7 @@ const ContactBox = props => {
                     className={`clickable close_icon`}
                     icon="window-close"
                     fixedWidth
-                    onClick={() => setActive(0)}
+                    onClick={props.resetActive}
                 />
             </div>
         </section>
