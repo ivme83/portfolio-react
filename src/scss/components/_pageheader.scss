@@ -1,5 +1,9 @@
 header {
     // padding-left: 20px;
+    margin-top: 0px;
+    @include respond-to(small) {
+        margin-top: 19px;
+    }
 
     text-align: right;
     font-weight: normal;

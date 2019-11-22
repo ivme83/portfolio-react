@@ -1,34 +1,71 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import portfolio_img from '../../assets/images/portfolio_img.jpg';
 
-const SideBar = props => (
-    <aside className="app-sidebar">
-        <figure className="portfolio_img_holder">
-            <img
-                className="portfolio_img"
-                src={portfolio_img}
-                alt="self portrait"
-            />
-        </figure>
-        <nav>
-            <ul>
-                <NavLink className="nav-link" to="/about">
-                    <li className="nav-item">About</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/career">
-                    <li className="nav-item">Career</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/portfolio">
-                    <li className="nav-item">Portfolio</li>
-                </NavLink>
-                <NavLink className="nav-link" to="/contact">
-                    <li className="nav-item">Contact</li>
-                </NavLink>
-            </ul>
-        </nav>
-    </aside>
-);
+const SideBar = props => {
+    const [minimize, setMinimize] = useState(false);
+    return (
+        <aside
+            className={`app-sidebar ${minimize ? 'app-sidebar-minimized' : ''}`}
+        >
+            <figure className="portfolio_img_holder">
+                <img
+                    className="portfolio_img"
+                    src={portfolio_img}
+                    alt="self portrait"
+                />
+            </figure>
+            <nav>
+                <ul>
+                    <NavLink className="nav-link" to="/about">
+                        <li className="nav-item">
+                            <FontAwesomeIcon
+                                className="nav-icon"
+                                icon={'address-card'}
+                                fixedWidth
+                            />
+                            About
+                        </li>
+                    </NavLink>
+                    <NavLink className="nav-link" to="/career">
+                        <li className="nav-item"><FontAwesomeIcon
+                                className="nav-icon"
+                                icon={'book'}
+                                fixedWidth
+                            />Career</li>
+                    </NavLink>
+                    <NavLink className="nav-link" to="/portfolio">
+                        <li className="nav-item"><FontAwesomeIcon
+                                className="nav-icon"
+                                icon={['fab', 'react']}
+                                fixedWidth
+                            />Portfolio</li>
+                    </NavLink>
+                    <NavLink className="nav-link" to="/contact">
+                        <li className="nav-item"><FontAwesomeIcon
+                                className="nav-icon"
+                                icon={'address-book'}
+                                fixedWidth
+                            />Contact</li>
+                    </NavLink>
+                </ul>
+            </nav>
+            <footer>
+                <button
+                    className="footer_btn"
+                    onClick={() => setMinimize(!minimize)}
+                >
+                    <FontAwesomeIcon
+                        className="min-icon"
+                        icon={'angle-right'}
+                        fixedWidth
+                    />
+                </button>
+            </footer>
+        </aside>
+    );
+};
 
 export default SideBar;

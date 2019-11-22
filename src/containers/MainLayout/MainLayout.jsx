@@ -10,9 +10,9 @@ class MainLayout extends Component {
 
     render() {
         return (
-            <div className="app">
+            <div className='app'>
                 <HashRouter>
-                    <SideBar />
+                    <SideBar minimizeSidebar={this.minimizeSidebar} />
                     <main className="app-main">
                         <Suspense fallback={this.loading()}>
                             <Switch>
