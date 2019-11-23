@@ -12,7 +12,7 @@
 
     // width: 256px;
 
-    transition: width 1s;
+    transition: width 750ms;
 
     .portfolio_img_holder {
         margin-left: auto;
@@ -28,7 +28,7 @@
         border-width: 8px;
         overflow: hidden;
 
-        transition: height 1s, width 1s, border-width 1s;
+        transition: height 750ms, width 750ms, border-width 750ms;
 
         .portfolio_img {
             width: 100%;
@@ -90,7 +90,7 @@
                     padding: 8px 0px 8px 18px;
                     // padding-left: 12px;
                     // padding-top: 4px;
-                    // padding-bottom: 4px;
+                    // padding-bottom: 4px;1
                 }
 
                 .nav-link:hover {
@@ -103,6 +103,7 @@
                 .nav-link.active {
                     padding-left: 12px;
                     border-bottom: none;
+                    background-color: lighten($sidebar-background, 10%);
                     border-left: 6px solid lighten($sidebar-background, 50%);
                 }
 
@@ -112,7 +113,7 @@
                         margin-right: 8px;
                         opacity: 0;
 
-                        transition: opacity 1s;
+                        transition: opacity 750ms;
                     }
                 }
             }
@@ -158,37 +159,39 @@
 
                 .min-icon {
                     transform: rotate(0deg);
-                    transition: transform 1s;
+                    transition: transform 750ms;
                 }
             }
         }
     }
 }
 
-.app-sidebar-minimized {
-    width: 56px;
+@include respond-to(small) {
+    .app-sidebar-minimized {
+        width: 56px;
 
-    .portfolio_img_holder {
-        height: 48px;
-        width: 48px;
+        .portfolio_img_holder {
+            height: 48px;
+            width: 48px;
 
-        border-width: 24px;
-    }
+            border-width: 24px;
+        }
 
-    nav {
-        ul {
-            .nav-item {
-                .nav-icon {
-                    opacity: 1;
+        nav {
+            ul {
+                .nav-item {
+                    .nav-icon {
+                        opacity: 1;
+                    }
                 }
             }
         }
-    }
 
-    footer {
-        .footer_btn {
-            .min-icon {
-                transform: rotate(180deg);
+        footer {
+            .footer_btn {
+                .min-icon {
+                    transform: rotate(180deg);
+                }
             }
         }
     }
