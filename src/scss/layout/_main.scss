@@ -4,11 +4,25 @@
 
 .app-main {
     grid-area: mn;
+    width: 100%;
+
     background-color: $body-background;
+
+    transition: margin-left 750ms;
 
     .page-container {
         max-width: $max-width;
     }
+    @include respond-to(small) {
+        position: fixed;
+        height: 100%;
+        z-index: 500;
+        margin-left: 256px;
+    }
+}
+
+.app-main-minimized {
+    margin-left: 56px;
 }
 
 .animated {

@@ -11,13 +11,17 @@
     height: 100vh;
 
     @include respond-to(small) {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        grid-template-rows: 1fr;
-        // grid-template: 1fr / 256px 1fr;
-        grid-template-areas: 'sd mn';
-        grid-gap: 0px;
+        display:flex;
+
         width: 100vw;
         height: 100vh;
+//         display: grid;
+//         grid-template-columns: auto 1fr;
+//         grid-template-rows: 1fr;
+//         // grid-template: 1fr / 256px 1fr;
+//         grid-template-areas: 'sd mn';
+//         grid-gap: 0px;
+//         width: 100vw;
+//         height: 100vh;
     }
 }

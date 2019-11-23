@@ -6,14 +6,24 @@ import SideBar from '../Sidebar/Sidebar.jsx';
 import routes from '../../routes';
 
 class MainLayout extends Component {
-    loading = () => <div className="loading">Loading&#8230;</div>;
+    state = {
+        minimize: false,
+    }
+
+    loading = () => <div className='loading'>Loading&#8230;</div>;
+
+    toggleMinimize = () => {
+        this.setState({
+            minimize: !this.state.minimize,
+        });
+    }
 
     render() {
         return (
             <div className='app'>
                 <HashRouter>
-                    <SideBar minimizeSidebar={this.minimizeSidebar} />
-                    <main className="app-main">
+                    <SideBar minimize={this.state.minimize} toggleMinimize={this.toggleMinimize} />
+                    <main className={`app-main ${this.state.minimize ? 'app-main-minimized' : ''}`}>
                         <Suspense fallback={this.loading()}>
                             <Switch>
                                 {routes.map((route, idx) => {
@@ -29,7 +39,7 @@ class MainLayout extends Component {
                                         />
                                     ) : null;
                                 })}
-                                <Redirect from="/" to="/about" />
+                                <Redirect from='/' to='/about' />
                             </Switch>
                         </Suspense>
                     </main>
