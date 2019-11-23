@@ -13,7 +13,7 @@
 
     // width: 256px;
 
-    transition: width 750ms;
+    transition: width $animation-duration;
 
     .portfolio_img_holder {
         margin-left: auto;
@@ -22,14 +22,15 @@
         width: 150px;
         height: 150px;
 
-        border-color: darkgray darkcyan;
+        background-color: darken($sidebar-background, 8%);
         border-image: none;
         border-radius: 50% 50% 50% 50%;
         border-style: solid;
         border-width: 8px;
         overflow: hidden;
 
-        transition: height 750ms, width 750ms, border-width 750ms;
+        transition: height $animation-duration, width $animation-duration, border-width $animation-duration,
+            border-color $animation-duration;
 
         .portfolio_img {
             width: 100%;
@@ -115,7 +116,12 @@
                         margin-right: 8px;
                         opacity: 0;
 
-                        transition: opacity 750ms;
+                        transition: opacity $animation-duration;
+                    }
+                    
+                    .nav-item-label {
+                        transition: opacity $animation-duration;
+                        opacity: 1;
                     }
                 }
             }
@@ -161,7 +167,7 @@
 
                 .min-icon {
                     transform: rotate(0deg);
-                    transition: transform 750ms;
+                    transition: transform $animation-duration;
                 }
             }
         }
@@ -177,6 +183,7 @@
             width: 48px;
 
             border-width: 24px;
+            border-color: $text-color;
         }
 
         nav {
@@ -184,6 +191,9 @@
                 .nav-item {
                     .nav-icon {
                         opacity: 1;
+                    }
+                    .nav-item-label {
+                        opacity: 0;
                     }
                 }
             }
@@ -213,6 +223,9 @@
                 .nav-item {
                     .nav-icon {
                         opacity: 0;
+                    }
+                    .nav-item-label {
+                        opacity: 1;
                     }
                 }
             }

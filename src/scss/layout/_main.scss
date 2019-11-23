@@ -8,7 +8,7 @@
 
     background-color: $body-background;
 
-    transition: margin-left 750ms;
+    transition: margin-left $animation-duration;
 
     .page-container {
         max-width: $max-width;

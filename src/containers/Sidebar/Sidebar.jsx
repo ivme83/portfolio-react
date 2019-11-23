@@ -16,7 +16,7 @@ const SideBar = props => (
                 src={portfolio_img}
                 alt="self portrait of Roland Willis"
             />
-            <figcaption>Self Portrait of Roland Willis</figcaption>
+            {/* <figcaption>Self Portrait of Roland Willis</figcaption> */}
         </figure>
         <nav>
             <ul>
@@ -27,7 +27,7 @@ const SideBar = props => (
                             icon={'address-card'}
                             fixedWidth
                         />
-                        About
+                        <span className='nav-item-label'>About</span>
                     </li>
                 </NavLink>
                 <NavLink className="nav-link" to="/portfolio">
@@ -37,7 +37,7 @@ const SideBar = props => (
                             icon={['fab', 'react']}
                             fixedWidth
                         />
-                        Portfolio
+                        <span className='nav-item-label'>Portfolio</span>
                     </li>
                 </NavLink>
                 <NavLink className="nav-link" to="/career">
@@ -47,7 +47,7 @@ const SideBar = props => (
                             icon={'book'}
                             fixedWidth
                         />
-                        Career
+                        <span className='nav-item-label'>Career</span>
                     </li>
                 </NavLink>
                 <NavLink className="nav-link" to="/contact">
@@ -57,7 +57,7 @@ const SideBar = props => (
                             icon={'address-book'}
                             fixedWidth
                         />
-                        Contact
+                        <span className='nav-item-label'>Contact</span>
                     </li>
                 </NavLink>
             </ul>
