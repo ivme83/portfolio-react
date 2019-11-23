@@ -22,7 +22,7 @@
         width: 150px;
         height: 150px;
 
-        background-color: darken($sidebar-background, 8%);
+        border-color: darken($sidebar-background, 8%);
         border-image: none;
         border-radius: 50% 50% 50% 50%;
         border-style: solid;
@@ -62,7 +62,7 @@
             }
 
             .nav-link {
-                color: $body-background;
+                color: $text-color;
 
                 text-decoration: none;
                 font-size: $font-size-large;
@@ -153,7 +153,7 @@
 
                 background-color: darken($sidebar-background, 8%);
 
-                color: $body-background;
+                color: $text-color;
                 font-size: $font-size-large;
 
                 border: none;
@@ -183,7 +183,6 @@
             width: 48px;
 
             border-width: 24px;
-            border-color: $text-color;
         }
 
         nav {

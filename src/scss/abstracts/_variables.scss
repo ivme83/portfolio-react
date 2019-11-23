@@ -21,7 +21,7 @@ $font-size-xx-small: .6rem;       // 8px?
 
 /// Copy text color
 /// @type Color
-$text-color: rgb(34, 34, 34) !default;
+$text-color: #fbfbfb !default;
 
 /// Main brand color
 /// @type Color
@@ -45,7 +45,8 @@ $sidebar-background: #2F353A;
 
 /// Body Background
 /// @type Color
-$body-background: #fbfbfb;
+$body-background: darken($sidebar-background, 10%);
+// $body-background: #333333;
 
 
 
