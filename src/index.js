@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './assets/fonts/Sketch_Block.ttf';
+import './assets/fonts/GrutchShaded.ttf';
 import './scss/main.scss';
 import MainLayout from './containers/index.js';
 import * as serviceWorker from './serviceWorker';

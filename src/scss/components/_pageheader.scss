@@ -3,6 +3,7 @@ header {
     margin-top: 0px;
     @include respond-to(small) {
         margin-top: 19px;
+        padding-right: 24px;
     }
 
     text-align: right;
@@ -76,6 +77,12 @@ header {
         animation-fill-mode: both;
 
         animation-delay: 500ms;
+
+        padding-right: 12px;
+
+        @include respond-to(small) {
+            padding-right: 0px;
+        }
     }
 
     @-webkit-keyframes h1SlideUp {

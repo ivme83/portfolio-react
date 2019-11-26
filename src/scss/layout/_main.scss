@@ -8,21 +8,26 @@
 
     background-color: $body-background;
 
-    transition: margin-left $animation-duration;
+    transition: margin-left max-width $animation-duration;
 
-    .page-container {
-        max-width: $max-width;
-    }
     @include respond-to(small) {
         position: fixed;
         height: 100%;
+        max-width: -webkit-calc(100vw - 256px);
+        max-width: -moz-calc(100vw - 256px);
+        max-width: calc(100vw - 256px);
         z-index: 500;
+
         margin-left: 256px;
     }
 }
 
 .app-main-minimized {
     margin-left: 56px;
+
+    max-width: -webkit-calc(100vw - 56px);
+    max-width: -moz-calc(100vw - 56px);
+    max-width: calc(100vw - 56px);
 }
 
 .animated {
@@ -49,7 +54,7 @@
     }
 }
 
-.fadeIn {    
+.fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
 }

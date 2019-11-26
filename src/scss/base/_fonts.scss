@@ -1,3 +1,19 @@
 // -----------------------------------------------------------------------------
 // This file contains all @font-face declarations, if any.
 // -----------------------------------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Londrina+Sketch&display=swap');
+
+$londrina-sketch: 'Londrina Sketch', cursivee;
+
+@font-face {
+    font-family: 'SketchBlock';
+    src: local('SketchBlock'),
+        url(../../assets/fonts/Sketch_Block.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'GrutchShaded';
+    src: local('GrutchShaded'),
+        url(../../assets/fonts/GrutchShaded.ttf) format('truetype');
+}

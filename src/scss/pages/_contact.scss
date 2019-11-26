@@ -6,9 +6,13 @@
     margin-top: 3rem;
     padding: 0px 2px;
 
+    margin-right: 4px;
     @include respond-to(small) {
         margin-left: 20px;
+        margin-right: 24px;
         padding: 0px;
+
+        max-width: 900px;
     }
     
     .contact_box {
