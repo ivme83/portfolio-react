@@ -20,14 +20,14 @@ const SideBar = props => (
         </figure>
         <nav>
             <ul>
-                <NavLink className="nav-link" to="/about">
+                <NavLink className="nav-link" to="/experience">
                     <li className="nav-item">
                         <FontAwesomeIcon
                             className="nav-icon"
-                            icon={'address-card'}
+                            icon={'stream'}
                             fixedWidth
                         />
-                        <span className='nav-item-label'>About</span>
+                        <span className='nav-item-label'>Experience</span>
                     </li>
                 </NavLink>
                 <NavLink className="nav-link" to="/portfolio">
@@ -38,16 +38,6 @@ const SideBar = props => (
                             fixedWidth
                         />
                         <span className='nav-item-label'>Portfolio</span>
-                    </li>
-                </NavLink>
-                <NavLink className="nav-link" to="/career">
-                    <li className="nav-item">
-                        <FontAwesomeIcon
-                            className="nav-icon"
-                            icon={'book'}
-                            fixedWidth
-                        />
-                        <span className='nav-item-label'>Career</span>
                     </li>
                 </NavLink>
                 <NavLink className="nav-link" to="/contact">

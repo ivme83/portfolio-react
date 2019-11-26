@@ -8,9 +8,9 @@ import * as serviceWorker from './serviceWorker';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
-import { faWindowClose, faAngleRight, faAddressCard, faBook, faAddressBook } from '@fortawesome/free-solid-svg-icons'
+import { faWindowClose, faAngleRight, faStream, faAddressBook, faChalkboardTeacher } from '@fortawesome/free-solid-svg-icons'
 
-library.add(fab, faWindowClose, faAngleRight, faAddressCard, faBook, faAddressBook);
+library.add(fab, faWindowClose, faAngleRight, faStream, faAddressBook, faChalkboardTeacher);
 
 
 ReactDOM.render(<MainLayout />, document.getElementById('root'));
