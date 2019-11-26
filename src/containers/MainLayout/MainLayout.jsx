@@ -39,7 +39,7 @@ class MainLayout extends Component {
                                         />
                                     ) : null;
                                 })}
-                                <Redirect from='/' to='/about' />
+                                <Redirect from='/' to='/experience' />
                             </Switch>
                         </Suspense>
                     </main>

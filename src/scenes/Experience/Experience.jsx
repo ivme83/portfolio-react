@@ -14,7 +14,7 @@ import SurchXicon from '../../assets/images/surchx_icon.png';
 import YouTech from '../../assets/images/youtech_logo.png';
 import YouTechicon from '../../assets/images/youtech_icon.png';
 
-class About extends Component {
+class Experience extends Component {
     state = {
         experience: [
             {
@@ -59,7 +59,7 @@ class About extends Component {
         return (
             <div className='page-container'>
                 <PageHeader
-                    header={'About Me'}
+                    header={'Experience'}
                     // subheader={'Roland Willis'}
                 />
                 <VerticalTimeline
@@ -125,4 +125,4 @@ class About extends Component {
     }
 }
 
-export default About;
+export default Experience;

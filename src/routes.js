@@ -1,31 +1,26 @@
 import React from 'react';
 
-const About = React.lazy(() => import('./scenes/About/index'));
-const Contact = React.lazy(() => import('./scenes/Contact/index'));
-const Career = React.lazy(() => import('./scenes/Career/index'));
+const Experience = React.lazy(() => import('./scenes/Experience/index'));
 const Portfolio = React.lazy(() => import('./scenes/Portfolio/index'));
+const Contact = React.lazy(() => import('./scenes/Contact/index'));
 
 const routes = [
     {
-        path: '/about',
-        name: 'About',
-        component: About,
-    },
-    {
-        path: '/contact',
-        name: 'Contact',
-        component: Contact,
-    },
-    {
-        path: '/career',
-        name: 'Career',
-        component: Career,
+        path: '/experience',
+        name: 'Experience',
+        component: Experience,
     },
     {
         path: '/portfolio',
         name: 'Portfolio',
         component: Portfolio,
     },
+    {
+        path: '/contact',
+        name: 'Contact',
+        component: Contact,
+    },
+    
 ];
 
 export default routes;
