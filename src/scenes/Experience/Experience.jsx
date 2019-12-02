@@ -4,14 +4,13 @@ import {
     VerticalTimeline,
     VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 
 import { PageHeader } from '../../components/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import SurchX from '../../assets/images/surchx_logo.png';
+// import SurchX from '../../assets/images/surchx_logo.png';
 import SurchXicon from '../../assets/images/surchx_icon.png';
-import YouTech from '../../assets/images/youtech_logo.png';
+// import YouTech from '../../assets/images/youtech_logo.png';
 import YouTechicon from '../../assets/images/youtech_icon.png';
 
 class Experience extends Component {
@@ -22,8 +21,17 @@ class Experience extends Component {
                 startDate: moment('2019-02-18'),
                 endDate: moment(),
                 jobTitle: 'Full Stack Developer',
-                description: 'This is a description.',
-                icon: <img src={SurchXicon} width='100%' heigth='100%' alt='SurchX Logo' />,
+                description: <span>Javascript|Ruby On Rails|Scala<br/>ReactJs|MongoDB|PostGreSQL</span>,
+                link: 'https://surchx.com',
+                background: 'rgb(0, 0, 200)',
+                icon: (
+                    <img
+                        src={SurchXicon}
+                        width="90%"
+                        heigth="90%"
+                        alt="SurchX Logo"
+                    />
+                ),
             },
 
             {
@@ -31,24 +39,70 @@ class Experience extends Component {
                 startDate: moment('2018-09-10'),
                 endDate: moment('2018-12-01'),
                 jobTitle: 'Full Stack Developer',
-                description: 'This is a description.',
-                icon: <img src={YouTechicon} width='100%' heigth='100%' alt='YouTech Logo' />,
+                description: <span>Javascript|PHP|Magento|WooCommerce<br/>ReactJs|MeteorJs|MongoDB|MySQL</span>,
+                link: 'https://www.youtechagency.com/',
+                background: 'rgb(0, 0, 200)',
+                icon: (
+                    <img
+                        src={YouTechicon}
+                        width="100%"
+                        heigth="100%"
+                        alt="YouTech Logo"
+                    />
+                ),
+            },
+            {
+                name: 'University of Arizona',
+                startDate: moment('2012-03-12'),
+                endDate: moment('2018-06-05'),
+                jobTitle: 'Full Stack Development Bootcamp',
+                description: <span>HTML|CSS|Javascript<br/>MongoDB|ExpressJs|ReactJs|NodeJs</span>,
+                link: 'https://bootcamp.ce.arizona.edu/coding/',
+                background: 'rgb(200, 0, 0)',
+                icon: <FontAwesomeIcon icon={'graduation-cap'} fixedWidth />,
             },
             {
                 name: 'Copper Ridge School',
                 startDate: moment('2012-07-01'),
                 endDate: moment('2017-06-30'),
                 jobTitle: 'Middle School Science Teacher',
-                description: 'This is a description.',
-                icon: <FontAwesomeIcon icon={'chalkboard-teacher'} />,
+                description: <span>Education|Communication|Collaboration|Formative Planning</span>,
+                link: 'https://www.susd.org/index.php/schools/susd-k-8/copper-ridge-school',
+                background: 'rgb(0, 200, 0)',
+                icon: (
+                    <FontAwesomeIcon icon={'chalkboard-teacher'} fixedWidth />
+                ),
             },
             {
                 name: 'Country Place School',
                 startDate: moment('2010-08-01'),
                 endDate: moment('2012-07-01'),
                 jobTitle: 'Middle School Science Teacher',
-                description: 'This is a description.',
-                icon: <FontAwesomeIcon icon={'chalkboard-teacher'} />,
+                description: <span>Education|Communication|Collaboration|Formative Planning</span>,
+                link: 'https://cpes.littletonaz.org/',
+                background: 'rgb(0, 200, 0)',
+                icon: (
+                    <FontAwesomeIcon icon={'chalkboard-teacher'} fixedWidth />
+                ),
+            },
+            {
+                name: 'Scottsdale Community College',
+                startDate: moment('2009-06-01'),
+                endDate: moment('2010-05-31'),
+                jobTitle: 'Scottsdale Teacher Education Partnership Program',
+                // description: <span>HTML|CSS|Javascript<br/>MongoDB|ExpressJs|ReactJs|NodeJs</span>,
+                link: 'https://www.scottsdalecc.edu/programs/education/step',
+                background: 'rgb(200, 0, 0)',
+                icon: <FontAwesomeIcon icon={'graduation-cap'} fixedWidth />,
+            },
+            {
+                name: "Collin's College",
+                startDate: moment('2004-05-01'),
+                endDate: moment('2007-09-01'),
+                jobTitle: 'Bachelor of Arts, Video Game Design',
+                // description: 'This is a description.',
+                background: 'rgb(200, 0, 0)',
+                icon: <FontAwesomeIcon icon={'graduation-cap'} fixedWidth />,
             },
         ],
     };
@@ -57,42 +111,39 @@ class Experience extends Component {
         const { experience } = this.state;
 
         return (
-            <div className='page-container'>
+            <div className="page-container">
                 <PageHeader
                     header={'Experience'}
                     // subheader={'Roland Willis'}
                 />
-                <VerticalTimeline
-                // layout={'1-column'}
-                >
+                <VerticalTimeline>
                     {experience.map(exp => (
                         <VerticalTimelineElement
                             key={exp.startDate}
-                            className='vertical-timeline-element--work'
+                            className="vertical-timeline-element--work"
                             contentStyle={{
-                                background: 'rgb(33, 150, 243)',
+                                background: exp.background,
                                 color: '#fff',
                             }}
                             contentArrowStyle={{
-                                borderRight: '7px solid  rgb(33, 150, 243)',
+                                borderRight: `7px solid  ${exp.background}`,
                             }}
                             date={`${exp.startDate.format(
                                 'MM-DD-YYYY'
                             )} - ${exp.endDate.format('MM-DD-YYYY')}`}
                             iconStyle={{
-                                background: 'rgb(33, 150, 243)',
+                                background: exp.background,
                                 color: '#fff',
                             }}
                             icon={exp.icon}
-                            // icon={<FontAwesomeIcon icon={'book'} />}
                         >
-                            <h3 className='vertical-timeline-element-title'>
-                                {exp.name}
+                            <h3 className="vertical-timeline-element-title">
+                                {exp.link ? <a href={exp.link} target='_blank' rel='noopener noreferrer'>{exp.name}</a> : exp.name}
                             </h3>
-                            <h4 className='vertical-timeline-element-subtitle'>
+                            <h4 className="vertical-timeline-element-subtitle">
                                 {exp.jobTitle}
                             </h4>
-                            <p>{exp.description}</p>
+                            {exp.description && <p>{exp.description}</p>}
                         </VerticalTimelineElement>
                     ))}
                 </VerticalTimeline>
