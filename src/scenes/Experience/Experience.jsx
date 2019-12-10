@@ -8,20 +8,48 @@ import {
 import { PageHeader } from '../../components/index';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-// import SurchX from '../../assets/images/surchx_logo.png';
+import SpyFuicon from '../../assets/images/spyfu_icon.png';
 import SurchXicon from '../../assets/images/surchx_icon.png';
-// import YouTech from '../../assets/images/youtech_logo.png';
 import YouTechicon from '../../assets/images/youtech_icon.png';
 
 class Experience extends Component {
     state = {
         experience: [
             {
-                name: 'SurchX',
-                startDate: moment('2019-02-18'),
+                name: 'SpyFu',
+                startDate: moment('2019-12-05'),
                 endDate: moment(),
                 jobTitle: 'Full Stack Developer',
-                description: <span>Javascript|Ruby On Rails|Scala<br/>ReactJs|MongoDB|PostGreSQL</span>,
+                description: (
+                    <span>
+                        Javascript|C#
+                        <br />
+                        VueJs|Asp.NET|MVC
+                    </span>
+                ),
+                link: 'https://spyfu.com',
+                background: 'rgb(0, 0, 200)',
+                icon: (
+                    <img
+                        src={SpyFuicon}
+                        width="90%"
+                        heigth="90%"
+                        alt="SpyFu Logo"
+                    />
+                ),
+            },
+            {
+                name: 'SurchX',
+                startDate: moment('2019-02-18'),
+                endDate: moment('2019-12-04'),
+                jobTitle: 'Full Stack Developer',
+                description: (
+                    <span>
+                        Javascript|Ruby On Rails|Scala
+                        <br />
+                        ReactJs|MongoDB|PostGreSQL
+                    </span>
+                ),
                 link: 'https://surchx.com',
                 background: 'rgb(0, 0, 200)',
                 icon: (
@@ -39,7 +67,13 @@ class Experience extends Component {
                 startDate: moment('2018-09-10'),
                 endDate: moment('2018-12-01'),
                 jobTitle: 'Full Stack Developer',
-                description: <span>Javascript|PHP|Magento|WooCommerce<br/>ReactJs|MeteorJs|MongoDB|MySQL</span>,
+                description: (
+                    <span>
+                        Javascript|PHP|Magento|WooCommerce
+                        <br />
+                        ReactJs|MeteorJs|MongoDB|MySQL
+                    </span>
+                ),
                 link: 'https://www.youtechagency.com/',
                 background: 'rgb(0, 0, 200)',
                 icon: (
@@ -56,7 +90,13 @@ class Experience extends Component {
                 startDate: moment('2012-03-12'),
                 endDate: moment('2018-06-05'),
                 jobTitle: 'Full Stack Development Bootcamp',
-                description: <span>HTML|CSS|Javascript<br/>MongoDB|ExpressJs|ReactJs|NodeJs</span>,
+                description: (
+                    <span>
+                        HTML|CSS|Javascript
+                        <br />
+                        MongoDB|ExpressJs|ReactJs|NodeJs
+                    </span>
+                ),
                 link: 'https://bootcamp.ce.arizona.edu/coding/',
                 background: 'rgb(200, 0, 0)',
                 icon: <FontAwesomeIcon icon={'graduation-cap'} fixedWidth />,
@@ -66,8 +106,13 @@ class Experience extends Component {
                 startDate: moment('2012-07-01'),
                 endDate: moment('2017-06-30'),
                 jobTitle: 'Middle School Science Teacher',
-                description: <span>Education|Communication|Collaboration|Formative Planning</span>,
-                link: 'https://www.susd.org/index.php/schools/susd-k-8/copper-ridge-school',
+                description: (
+                    <span>
+                        Education|Communication|Collaboration|Formative Planning
+                    </span>
+                ),
+                link:
+                    'https://www.susd.org/index.php/schools/susd-k-8/copper-ridge-school',
                 background: 'rgb(0, 200, 0)',
                 icon: (
                     <FontAwesomeIcon icon={'chalkboard-teacher'} fixedWidth />
@@ -78,7 +123,11 @@ class Experience extends Component {
                 startDate: moment('2010-08-01'),
                 endDate: moment('2012-07-01'),
                 jobTitle: 'Middle School Science Teacher',
-                description: <span>Education|Communication|Collaboration|Formative Planning</span>,
+                description: (
+                    <span>
+                        Education|Communication|Collaboration|Formative Planning
+                    </span>
+                ),
                 link: 'https://cpes.littletonaz.org/',
                 background: 'rgb(0, 200, 0)',
                 icon: (
@@ -138,7 +187,17 @@ class Experience extends Component {
                             icon={exp.icon}
                         >
                             <h3 className="vertical-timeline-element-title">
-                                {exp.link ? <a href={exp.link} target='_blank' rel='noopener noreferrer'>{exp.name}</a> : exp.name}
+                                {exp.link ? (
+                                    <a
+                                        href={exp.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        {exp.name}
+                                    </a>
+                                ) : (
+                                    exp.name
+                                )}
                             </h3>
                             <h4 className="vertical-timeline-element-subtitle">
                                 {exp.jobTitle}
